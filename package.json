@@ -16,6 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@bugsnag/js": "^7.20.2",
+    "@bugsnag/plugin-react": "^7.19.0",
     "gatsby": "^5.9.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
