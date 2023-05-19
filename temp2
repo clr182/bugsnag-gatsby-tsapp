@@ -1,0 +1,34 @@
+const path = require("path");
+const webpack = require("webpack");
+const { BugsnagSourceMapUploaderPlugin } = require('webpack-bugsnag-plugins');
+
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      entry: './src/pages/index.tsx',
+      devtool: 'source-map',
+      output: {
+        path: __dirname,
+        filename: './bundle.js',
+        publicPath: 'https://you-app.xyz/assets/',
+      },
+    plugins: [].concat(
+      new BugsnagSourceMapUploaderPlugin({
+        apiKey: '451e1df4122c750f5e0725ecbc4c7514',
+        appVersion: '1.2.3',
+        metadata: {
+          "buildServer": "build1",
+          "buildReason": "Releasing JIRA-1234"
+        },
+      }))
+    
+    }
+  })
+}

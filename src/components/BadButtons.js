@@ -1,6 +1,7 @@
 import Bugsnag from '@bugsnag/browser'
 import React from 'react'
 
+
 class BadButtons extends React.Component {
   constructor (props) {
     super(props)

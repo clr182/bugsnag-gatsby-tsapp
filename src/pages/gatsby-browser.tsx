@@ -13,3 +13,5 @@ const wrappedRootElement = (element: ReactNode) => {
     ({ element }) => {
       return wrappedRootElement(element);
     };
+
+    export default wrappedRootElement;

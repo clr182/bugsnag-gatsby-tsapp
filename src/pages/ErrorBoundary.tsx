@@ -5,7 +5,7 @@ import BugsnagPluginReact, {
     } from '@bugsnag/plugin-react';
 
 
-const apiKey = 'd6f10d9e0331127fae23b181fc0e9355';
+const apiKey = '451e1df4122c750f5e0725ecbc4c7514';
 
 Bugsnag.start({
   apiKey,
